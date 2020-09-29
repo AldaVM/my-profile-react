@@ -4,7 +4,7 @@ export const HeaderContainer = styled("section")`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  background-color: rgb(0, 255, 0);
+  background-color: ${(props) => props.bg};
 `;
 
 export const TitleLogo = styled("h3")`

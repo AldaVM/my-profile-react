@@ -1,6 +1,6 @@
 import { Container, SubTitle, CardWork, GridCards } from "../../../common";
 
-export default function SkillsSection() {
+export default function GridWorks() {
   const work = {
     title: "Cheese Socks - Página Web",
     slug: "cheese-socks-web",
@@ -9,14 +9,13 @@ export default function SkillsSection() {
       medium: "/assets/blog/cover.png",
     },
     description:
-      "Diseño y desarrolo de la página web, además de crear un CMS para gestionar contenido.",
+      "Página basada en Shopifiy, se desarrollo un tema personalizado, además, de implementar aplicaciones custom para la plataforma.",
   };
 
   return (
-    <Container>
+    <Container id="portfolio">
       <SubTitle title="Portafolio" />
       <GridCards>
-        <CardWork {...work} />
         <CardWork {...work} />
       </GridCards>
     </Container>

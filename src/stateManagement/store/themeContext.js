@@ -1,16 +1,13 @@
 import { createContext } from "react";
 
 export const THEMES = {
-  light: {
-    foreground: "rgb(33, 36, 40)",
-    background: "#fff",
-  },
-  dark: {
-    foreground: "rgb(246, 247, 249)",
-    background: "rgb(33, 36, 40)",
-  },
+  foreground: "rgb(33, 36, 40)",
+  background: "#fff",
+  footerbg: "#f1f3f5",
+  headerbg: "rgb(0, 255, 0)",
+  type: "light",
 };
 
-const ThemeContext = createContext(THEMES.light);
+const ThemeContext = createContext(THEMES);
 
 export default ThemeContext;

@@ -3,7 +3,7 @@ import { AboutMeContainer } from "./Styled";
 
 export default function CardDescription() {
   return (
-    <Section bg="#212428">
+    <Section bg="#212428" id="aboutme">
       <AboutMeContainer>
         <FormatImage
           size="200px"

@@ -22,6 +22,10 @@ export const HeaderForm = styled("div")`
     color: #000;
     cursor: pointer;
   }
+
+  @media screen and (max-width: 600px) {
+    padding: 1em 1em;
+  }
 `;
 
 export const WrapperForm = styled("div")`
@@ -32,10 +36,15 @@ export const WrapperForm = styled("div")`
   border: 3px solid rgb(110, 109, 95);
   color: #000;
 
-  h3 {
+  h5 {
+    font-size: 20px;
     text-align: center;
     padding-top: 2em;
     color: #000;
+
+    @media screen and (max-width: 600px) {
+      font-size: 1px;
+    }
   }
 `;
 
@@ -43,6 +52,10 @@ export const Form = styled("form")`
   display: flex;
   flex-direction: column;
   padding: 1em 2em;
+
+  @media screen and (max-width: 600px) {
+    padding: 1em 1em;
+  }
 
   input,
   textarea {

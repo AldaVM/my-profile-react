@@ -1,4 +1,5 @@
 import { Console, Container, SubTitle } from "../../../common";
+import { MY_SKILLS } from "../../../../consts";
 
 export default function SkillsSection() {
   return (

@@ -2,6 +2,8 @@ import styled from "@emotion/styled";
 
 export const WrapperConsole = styled("section")`
   padding-top: 2rem;
+  width: 100%;
+  max-width: 1100px;
 `;
 
 export const HeaderConsole = styled("div")`
@@ -14,7 +16,7 @@ export const HeaderConsole = styled("div")`
   background-color: #f1f3f5;
   border-radius: 1em 1em 0px 0px;
 
-  & span {
+  & i {
     display: inline-block;
     width: 15px;
     height: 15px;
@@ -58,6 +60,10 @@ export const BodyConsole = styled("div")`
   max-height: 600px;
   height: 34rem;
 
+  @media screen and (max-width: 400px) {
+    height: 24rem;
+  }
+
   h4 {
     margin-top: 0.5em;
     color: #fff;
@@ -74,6 +80,23 @@ export const BodyConsole = styled("div")`
 
   .faild-command {
     color: #fff;
+  }
+
+  pre {
+    font-family: Courier New, Courier, monospace;
+    line-height: 1.1;
+    color: #00ff00;
+    font-weight: 700;
+    font-size: 25px;
+    padding: 0;
+
+    @media screen and (max-width: 500px) {
+      font-size: 10px;
+    }
+
+    @media screen and (max-width: 400px) {
+      font-size: 8px;
+    }
   }
 
   span {

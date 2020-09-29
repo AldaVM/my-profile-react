@@ -7,9 +7,7 @@ import { useContext } from "react";
 import ThemeContext from "../../../stateManagement/store/themeContext";
 
 export default function HomePage({ posts = [] }) {
-  const { customTheme } = useContext(ThemeContext);
-
-  const theme = Object.entries(customTheme)[0][1];
+  const { theme } = useContext(ThemeContext);
 
   return (
     <Section bg={theme?.background} foreground={theme?.foreground}>

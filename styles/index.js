@@ -38,6 +38,10 @@ export const globalStyle = (
         font-family: monospace;
       }
 
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
         font-size: 15px;
       }
@@ -72,6 +76,19 @@ export const globalStyle = (
       a {
         font-size: 13px;
         text-decoration: none;
+      }
+
+      .active-itemnav {
+        text-shadow: 3px 2px 1px var(--colorSecondaryLightOpacity);
+      }
+
+      .scrolled {
+        position: fixed !important;
+        left: 0 !important;
+
+        @media screen and (max-width: 500px) {
+          left: -100% !important;
+        }
       }
 
       @media screen and (max-width: 700px) {

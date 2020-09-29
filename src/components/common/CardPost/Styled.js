@@ -12,7 +12,7 @@ export const Tag = styled("span")`
   font-size: 12px;
   font-weight: 700;
   padding: 10px;
-  color: #005a00;
+  color: #005a00 !important;
   box-shadow: rgb(194, 202, 214) 0px 0.2em, rgb(194, 202, 214) 0px -0.2em,
     rgb(194, 202, 214) 0.2em 0px, rgb(194, 202, 214) -0.2em 0px;
   position: absolute;
@@ -22,6 +22,12 @@ export const Tag = styled("span")`
 
 export const WrapperImagePost = styled("div")`
   position: relative;
+  overflow: hidden;
+  transition: transform 3s ease;
+
+  img:hover {
+    transform: scale(1.5);
+  }
 `;
 
 export const FooterCardPost = styled("div")`

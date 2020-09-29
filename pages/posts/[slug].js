@@ -2,10 +2,10 @@ import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import MyLayout from "../../src/components/layout/MyLayout";
 import { postUtils, markdownToHtml } from "../../src/utils";
-import { PostHeader, PostBody } from "../../src/components/view/post";
+import ArticleBlog from "../../src/components/view/post";
 import ThemeProvider from "../../src/stateManagement/providers/ThemeProvider";
 
-export default function Post({ post, morePosts, preview }) {
+export default function Post({ post, posts, preview }) {
   const router = useRouter();
 
   if (!router.isFallback && !post?.slug) {
@@ -15,21 +15,15 @@ export default function Post({ post, morePosts, preview }) {
   return (
     <ThemeProvider>
       <MyLayout headers={post}>
-        <article>
-          <PostHeader
-            title={post.title}
-            author={post.author}
-            coverImage={post.coverImage}
-            date={post.date}
-          />
-          <PostBody content={post.content} />
-        </article>
+        <ArticleBlog post={post} posts={posts} />
       </MyLayout>
     </ThemeProvider>
   );
 }
 
 export async function getStaticProps({ params }) {
+  const slugs = postUtils.getAllPosts(["slug"]);
+
   const post = postUtils.getPostBySlug(params.slug, [
     "title",
     "date",
@@ -41,6 +35,18 @@ export async function getStaticProps({ params }) {
     "coverImage",
   ]);
 
+  const posts = slugs.map((postSlug) => {
+    return postUtils.getPostBySlug(postSlug.slug, [
+      "title",
+      "date",
+      "slug",
+      "author",
+      "timeRead",
+      "coverImage",
+      "tag",
+    ]);
+  });
+
   const content = await markdownToHtml(post.content || "");
 
   return {
@@ -49,6 +55,7 @@ export async function getStaticProps({ params }) {
         ...post,
         content,
       },
+      posts,
     },
   };
 }

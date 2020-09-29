@@ -3,7 +3,7 @@ import { ContainerGridPost } from "./Styled";
 
 export default function GridBlog({ previewPosts = [] }) {
   return (
-    <ContainerGridPost>
+    <ContainerGridPost id="myblog">
       <SubTitle title="Publicaciones" />
       <GridCards>
         {previewPosts.map((post, index) => (

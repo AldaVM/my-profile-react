@@ -16,7 +16,7 @@ import { useState, useContext } from "react";
 import ThemeContext from "../../../stateManagement/store/themeContext";
 
 export default function Header() {
-  const { changeTheme, customTheme } = useContext(ThemeContext);
+  const { changeTheme, theme } = useContext(ThemeContext);
 
   const [iconTheme, setIconTheme] = useState("sun");
   const [openNav, setOpenNav] = useState(false);
@@ -36,7 +36,7 @@ export default function Header() {
 
   return (
     <header>
-      <HeaderContainer>
+      <HeaderContainer bg={theme?.headerbg}>
         <HeaderSocial>
           <TitleLogo>AldairVM</TitleLogo>
           <ListSocialMedia>
@@ -67,7 +67,7 @@ export default function Header() {
         </ButtonToggle>
       </HeaderContainer>
 
-      <NavTop isMobile={openNav} />
+      <NavTop isMobile={openNav} handleNavbar={onShowNavbar} />
     </header>
   );
 }

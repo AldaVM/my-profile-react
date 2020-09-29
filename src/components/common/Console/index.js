@@ -43,10 +43,35 @@ function ContentSkills({ title, visible }) {
   );
 }
 
+export function HeaderTerminal({ title }) {
+  return (
+    <HeaderConsole>
+      <div>
+        <i>
+          <FontAwesomeIcon icon={faTerminal} size="xs" />
+        </i>
+        <span>{title}</span>
+      </div>
+      <ControlersConsole>
+        <i>
+          <FontAwesomeIcon icon={faWindowMinimize} size="xs" />
+        </i>
+        <i>
+          <FontAwesomeIcon icon={faWindowMaximize} size="xs" />
+        </i>
+        <i>
+          <FontAwesomeIcon icon={faWindowClose} size="xs" />
+        </i>
+      </ControlersConsole>
+    </HeaderConsole>
+  );
+}
+
 export default function Console({ title }) {
   const [isVisible, setIsVisible] = useState(false);
   const [messageCommand, setMessageCommand] = useState("");
-  const dateConsole = new Date().toString();
+  const dateConsole =
+    "Mon Sep 28 2020 10:15:53 GMT-0500 (hora estándar de Perú)";
 
   function viewContent(e) {
     if (e.key === "Enter") {
@@ -61,25 +86,7 @@ export default function Console({ title }) {
 
   return (
     <WrapperConsole>
-      <HeaderConsole>
-        <div>
-          <span>
-            <FontAwesomeIcon icon={faTerminal} size="xs" />
-          </span>
-          <span>{title}</span>
-        </div>
-        <ControlersConsole>
-          <span>
-            <FontAwesomeIcon icon={faWindowMinimize} size="xs" />
-          </span>
-          <span>
-            <FontAwesomeIcon icon={faWindowMaximize} size="xs" />
-          </span>
-          <span>
-            <FontAwesomeIcon icon={faWindowClose} size="xs" />
-          </span>
-        </ControlersConsole>
-      </HeaderConsole>
+      <HeaderTerminal title={title} />
       <BodyConsole>
         <span>{`${dateConsole}`}</span>
         <span className="text-green">

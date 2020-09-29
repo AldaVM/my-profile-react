@@ -15,7 +15,7 @@ import {
 
 export default function FormContact() {
   return (
-    <ContainerFormContact>
+    <ContainerFormContact id="contactus">
       <SubTitle title="Contáctame" />
       <WrapperForm>
         <HeaderForm>
@@ -29,7 +29,7 @@ export default function FormContact() {
             <FontAwesomeIcon icon={faWindowClose} size="xs" />
           </span>
         </HeaderForm>
-        <h3>Escríbeme para trabajar juntos</h3>
+        <h5>Escríbeme para trabajar juntos</h5>
         <Form>
           <FormInputs>
             <input type="text" placeholder="Nombres" />

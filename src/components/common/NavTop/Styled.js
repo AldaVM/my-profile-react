@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 export const Nav = styled("nav")`
   position: relative;
   top: 0;
+  right: 0;
   z-index: var(--z-tooltip);
   width: 100%;
   background-color: var(--colorPrimaryDark);

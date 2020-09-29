@@ -6,6 +6,6 @@ export const WrapperPicture = styled("div")`
   img {
     width: 100%;
     vertical-align: top;
-    image-rendering: crisp-edges;
+    transform: scale(1);
   }
 `;
