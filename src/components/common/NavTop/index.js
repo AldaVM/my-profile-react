@@ -52,8 +52,8 @@ export default function NavTop({ isMobile = false, handleNavbar }) {
           </a>
         </NavItem>
         <NavItem>
-          <a aria-label="Portafolio" data-name_section="portfolio">
-            Portafolio
+          <a aria-label="Habilidades" data-name_section="skills">
+            Habilidades
           </a>
         </NavItem>
         <NavItem>

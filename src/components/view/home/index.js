@@ -13,7 +13,6 @@ export default function HomePage({ posts = [] }) {
     <Section bg={theme?.background} foreground={theme?.foreground}>
       <SkillsSection />
       <GridBlog previewPosts={posts} />
-      <GridWorks />
       <FormContact />
     </Section>
   );

@@ -1,9 +1,8 @@
 import { Console, Container, SubTitle } from "../../../common";
-import { MY_SKILLS } from "../../../../consts";
 
 export default function SkillsSection() {
   return (
-    <Container>
+    <Container id="skills">
       <SubTitle title="Habilidades" />
       <p>
         Para ver mis habilidades, por favor ejecuta la siguiente línea: node
