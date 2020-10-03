@@ -9,18 +9,19 @@ export const PostBodyWrapper = styled("div")`
   p {
     font-size: 16px;
     line-height: 1.5;
-    padding: 1em 0;
+    padding: 1rem 0;
   }
 
   h2,
-  h3 {
-    padding: 1em 0;
+  h3,
+  h4 {
+    padding: 0.5rem 0;
   }
 
   blockquote {
     background-color: #000;
-    margin: 1.5em 0;
-    padding: 1em;
+    margin: 1rem 0;
+    padding: 1rem;
     border-radius: 0.5em;
   }
 
@@ -35,15 +36,17 @@ export const PostBodyWrapper = styled("div")`
     padding: 1em;
     border-radius: 5px;
     margin: 1em 0;
+    overflow-x: scroll;
   }
 
   .code-mark {
     display: inline;
-    color: #000;
-    background-color: rgba(0, 0, 0, 0.1);
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 0;
     border-radius: 0;
     margin: 0 0;
+    overflow-x: scroll;
   }
 
   .code-sintaxis {
