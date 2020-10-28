@@ -11,7 +11,7 @@ export const HeaderForm = styled("div")`
   border-bottom: 2px solid rgb(110, 109, 95);
   display: flex;
   flex-direction: row;
-  justify-content: right;
+  justify-content: flex-end;
 
   span {
     display: inline-block;
@@ -48,6 +48,55 @@ export const WrapperForm = styled("div")`
   }
 `;
 
+export const InputForm = styled("input")`
+  padding: 0.5em;
+  background-color: rgb(242, 241, 229);
+  margin: 0.5em 0;
+  font-family: var(--fontFamily);
+  font-size: 15px;
+  border: 2px solid;
+  border-color: ${(props) => (props.error ? "tomato" : "#000")};
+  border-radius: 2px;
+  &::placeholder {
+    color: black;
+    font-weight: bold;
+    font-family: var(--fontFamily);
+  }
+`;
+
+export const TextareaForm = styled("textarea")`
+  padding: 0.5em;
+  background-color: rgb(242, 241, 229);
+  margin: 0.5em 0;
+  font-family: var(--fontFamily);
+  font-size: 15px;
+  border: 2px solid;
+  border-color: ${(props) => (props.error ? "tomato" : "#000")};
+  border-radius: 2px;
+  &::placeholder {
+    color: black;
+    font-weight: bold;
+    font-family: var(--fontFamily);
+  }
+`;
+
+export const SelectForm = styled("select")`
+  padding: 0.5em;
+  background-color: rgb(242, 241, 229);
+  margin: 0.5em 0;
+  font-family: var(--fontFamily);
+  font-size: 15px;
+  color: black;
+  font-weight: 700;
+  border: 2px solid;
+  border-color: ${(props) => (props.error ? "tomato" : "#000")};
+  border-radius: 2px;
+
+  option {
+    padding: none;
+  }
+`;
+
 export const Form = styled("form")`
   display: flex;
   flex-direction: column;
@@ -57,25 +106,8 @@ export const Form = styled("form")`
     padding: 1em 1em;
   }
 
-  input,
-  textarea {
-    padding: 0.5em;
-    background-color: rgb(242, 241, 229);
-    margin: 0.5em 0;
-    font-family: var(--fontFamily);
-    font-size: 15px;
-    border: 2px solid #000;
-    border-radius: 2px;
-
-    &::placeholder {
-      color: black;
-      font-weight: bold;
-      font-family: var(--fontFamily);
-    }
-  }
-
   button {
-    padding: 0.5em 1.5em;
+    padding: 0.8em 1.5em;
     background-color: rgb(242, 241, 229);
     border: 2px solid #000;
     border-radius: 2px;
@@ -84,7 +116,35 @@ export const Form = styled("form")`
     cursor: pointer;
     color: #000;
     font-weight: 700;
+    box-shadow: 1px 1px 2px transparent;
+    transition: box-shadow 0.2s linear 0.2s;
+
+    :disabled {
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    :hover {
+      box-shadow: 1px 1px 2px #888888;
+    }
   }
+`;
+
+export const MessageReponse = styled("div")`
+  text-align: center;
+  font-size: 1em;
+  vertical-align: middle;
+  line-height: 1.5;
+  padding-top: 1em;
+  padding-bottom: 2em;
+`;
+
+export const LoadingSendMsg = styled("div")`
+  text-align: center;
+  font-size: 1em;
+  vertical-align: middle;
+  line-height: 1.5;
+  padding-top: 1em;
+  padding-bottom: 2em;
 `;
 
 export const FormInputs = styled("div")`

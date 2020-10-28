@@ -1,7 +1,6 @@
 import { Section } from "../../common";
 import SkillsSection from "../aboutme/Skills";
 import GridBlog from "../blog/GridBlogs";
-import GridWorks from "../profile/GridWorks";
 import FormContact from "../contactus/FormContact";
 import { useContext } from "react";
 import ThemeContext from "../../../stateManagement/store/themeContext";

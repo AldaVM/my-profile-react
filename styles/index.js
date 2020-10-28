@@ -43,7 +43,7 @@ export const globalStyle = (
       }
 
       body {
-        font-size: 15px;
+        font-size: 16px;
       }
 
       p {

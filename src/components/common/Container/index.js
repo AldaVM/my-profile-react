@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 
 export const Section = styled("section")`
   width: 100%;
+  transition: background 0.2s linear 0.2s;
   background-color: ${(props) => props.bg};
   color: ${(props) => props.foreground};
   padding: 4rem 1rem;

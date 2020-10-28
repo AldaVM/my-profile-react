@@ -33,3 +33,6 @@ export const MY_SKILLS = {
   tools: ["Github", "Figma", "Visual Studio Code"],
   hobbies: ["Jiu Jitsu", "Make clay sculptures"],
 };
+
+export const URL_MAIL_API = "https://api-send-mails-contact.herokuapp.com/v1/api";
+export const SERVICE_SEND_MAIL = "mail/send-contact";
